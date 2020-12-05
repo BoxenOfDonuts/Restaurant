@@ -1,0 +1,156 @@
+* {
+    margin: 0;
+    padding: 0;
+    color: white;
+
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 500;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    background-image: url('/dist/resources/images/tall-hc-large.jpg');
+    /* background-position: top left; */
+    background-position: 15% 10%;
+    /* background-size: contain ; */
+    background-size: cover ;
+    background-repeat: repeat-y ;
+    background-color: #e7e7c6;
+    background-attachment: scroll ;
+    /* filter: blur(3px); */
+    /* margin:0px 10px; */  
+}
+
+
+#a {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url('/dist/resources/images/hotchocolate-large.jpg');
+    background-position: center;
+    /* background-position: 50% 50%; */
+    /* background-size: contain ; */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: #e7e7c6;
+    /* background-attachment: fixed; */
+    /* filter: blur(3px); */
+    /* margin:0px 10px; */
+}
+
+.canvas {
+    display: flex;
+    flex-direction: column;
+    flex: 1 0 auto;
+    justify-items: center;
+    align-items: center;
+    
+}
+
+#content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.image-text {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+    padding: 30px;
+    padding: 20px 70px;
+    width: 55%;
+}
+
+
+h1 {
+    padding: 20px 0;
+    color: yellow;
+}
+
+.nav {
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+ul.topnav {
+    list-style-type: none;
+    margin: 10px 0 0 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+
+}
+
+ul.topnav li {
+    float: right;
+}
+
+ul.topnav li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 20px 22px;
+    text-decoration: none;
+    font-size: 1.1em;
+}
+
+ul.topnav li a:hover:not(.active) {
+    background-color: #111;
+}
+
+ul.topnav li a.active {
+    background-color: grey;
+}
+
+ul.topnav li.left {
+    float: left;
+}
+
+.footer {
+    width: 100%;
+    background-color: #333;
+    display: flex;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.center {
+    padding: 15px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.la-github {
+    color: white;
+    font-size: 2em;
+}
+
+.logo {
+    font-size: 128px;
+    text-align: center;
+}
+
+.text-footer {
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 2px solid black;
+    display: flex;
+    justify-content: space-around;
+}
+
+.text-footer > * {
+    text-align: center;
+    font-size: larger;
+}
+
+.text-content p {
+    font-size: 25px;
+}
