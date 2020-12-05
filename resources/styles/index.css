@@ -23,6 +23,7 @@ body {
     background-repeat: repeat-y ;
     background-color: #e7e7c6;
     background-attachment: scroll ;
+    /* font-family: fantasy ; */
     /* filter: blur(3px); */
     /* margin:0px 10px; */  
 }
@@ -59,11 +60,17 @@ body {
     margin-top: 40px;
 }
 
-.image-text {
+.image-text, .grid-wrapper {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
     padding: 30px;
     padding: 20px 70px;
     width: 55%;
+}
+
+.grid-wrapper {
+    padding: 30px;
+    padding: 20px 20px;
+    width: 75%;
 }
 
 
@@ -153,4 +160,41 @@ ul.topnav li.left {
 
 .text-content p {
     font-size: 25px;
+}
+
+.grid-item p {
+    font-size: 1.2em;
+}
+
+.grid-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+.grid-item {
+    display: flex;
+    justify-content: space-between;
+    border: 2px solid black;
+    padding: 5px;
+    background-color: #333;
+    /* margin: 0px -50px;
+    box-sizing: content-box; */
+}
+
+.item-picture {
+    width: 124px;
+    height: 124px;
+}
+
+.item-picture img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.item-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
