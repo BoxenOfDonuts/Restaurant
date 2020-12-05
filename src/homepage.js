@@ -11,7 +11,7 @@ const logo = () => {
 const generateHomepageText = () => {
     const parent = divFactory('text-content');
     const header = createText('Coco Cabana', 'h1');
-    const para = createText('Music and passion are always in fashion at the coco cabana', 'p');
+    const para = createText('Chocolate and passion are always in fashion at the coco cabana', 'p');
     const lorem = createText('Lorem ipsum dolor sit amet, consectetur adipiscing elit,\
     sed do eiusmod tempor incididunt ut labore et dolore \
     magna aliqua. Ut enim ad minim veniam, quis nostrud \
