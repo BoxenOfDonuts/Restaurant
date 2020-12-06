@@ -1,6 +1,5 @@
-import { divFactory, createText } from "./utils.js";
-import { generateFooter } from "./footer";
-
+import { divFactory, createText } from './utils.js'
+import { generateFooter } from './footer'
 
 // const generateContactText = () => {
 //     const parent = divFactory('text-content');
@@ -22,95 +21,119 @@ import { generateFooter } from "./footer";
 // }
 
 const menuItem = (name, desc, pic, price) => {
-    return {name, desc, pic, price}
+    return { name, desc, pic, price }
 }
 
-const pictureUrl = '../dist/resources/images/mug-large.jpg';
+const pictureUrl = '../dist/resources/images/mug-large.jpg'
 
 const Menu = (() => {
     let menuItems = []
 
     const printItems = () => {
-        items().forEach(item => console.log(item))
+        items().forEach((item) => console.log(item))
     }
 
     /* just to have a menu */
     const _fillMenu = () => {
-        menuItems.push(menuItem('Regular', 'milk, cacoa powder, in a mug. Pretty Regualar.', pictureUrl, 4.00));
-        menuItems.push(menuItem('Marshmellow Haven', 'milk, cacoa powder. Topped with a mountain of marshmellows.', pictureUrl, 5.00));
-        menuItems.push(menuItem('Dark Chocolate', 'milk, dark cacoa powder, and a mug.', pictureUrl, 4.00));
-        menuItems.push(menuItem('Deluxe', 'milk, cacoa powder. Topped with whipped cream or marshmellows. Smothered in chocolate syrup and more chocoalte powder',  pictureUrl, 6));
+        menuItems.push(
+            menuItem(
+                'Regular',
+                'milk, cacoa powder, in a mug. Pretty Regualar.',
+                pictureUrl,
+                4.0
+            )
+        )
+        menuItems.push(
+            menuItem(
+                'Marshmellow Haven',
+                'milk, cacoa powder. Topped with a mountain of marshmellows.',
+                pictureUrl,
+                5.0
+            )
+        )
+        menuItems.push(
+            menuItem(
+                'Dark Chocolate',
+                'milk, dark cacoa powder, and a mug.',
+                pictureUrl,
+                4.0
+            )
+        )
+        menuItems.push(
+            menuItem(
+                'Deluxe',
+                'milk, cacoa powder. Topped with whipped cream or marshmellows. Smothered in chocolate syrup and more chocoalte powder',
+                pictureUrl,
+                6
+            )
+        )
     }
 
-    _fillMenu();
+    _fillMenu()
 
     const _createMenuItemCard = (item) => {
-        const gridItem = divFactory('grid-item');
+        const gridItem = divFactory('grid-item')
         // gridItem.classList.add('text-content')
-        const text = divFactory('item-info');
-        const picture = divFactory('item-picture');
-    
+        const text = divFactory('item-info')
+        const picture = divFactory('item-picture')
+
         console.log(item)
         for (let key in item) {
-            let stuff = item[key];
+            let stuff = item[key]
             if (key === 'pic') {
-                const pic = document.createElement('img');
-                pic.alt = item.name;
-                pic.src = item[key];
-                picture.appendChild(pic);
-                continue;
-        } else if (key === 'price') {
+                const pic = document.createElement('img')
+                pic.alt = item.name
+                pic.src = item[key]
+                picture.appendChild(pic)
+                continue
+            } else if (key === 'price') {
                 stuff = `$${item[key]}`
+            }
+            // switch(key) {
+            //     case "pic":
+            //         const pic = document.createElement('img');
+            //         pic.alt = item.name;
+            //         pic.src = item[key];
+            //         picture.appendChild(pic);
+            //         continue;
+            //     case "price":
+            //         const price = `$${item[key]}`
+            //         break;
+            //         // element = createText(`${item[key]}`)
+            // }
+
+            const div = divFactory(key)
+            const content = createText(stuff, 'p')
+            div.appendChild(content)
+            text.appendChild(div)
         }
-        // switch(key) {
-        //     case "pic":
-        //         const pic = document.createElement('img');
-        //         pic.alt = item.name;
-        //         pic.src = item[key];
-        //         picture.appendChild(pic);
-        //         continue;
-        //     case "price":
-        //         const price = `$${item[key]}`
-        //         break;
-        //         // element = createText(`${item[key]}`)
-        // }
-    
-            const div = divFactory(key);
-            const content = createText(stuff, 'p');
-            div.appendChild(content);
-            text.appendChild(div);
-        }
-    
-        gridItem.appendChild(text);
-        gridItem.appendChild(picture);
-            
-    
+
+        gridItem.appendChild(text)
+        gridItem.appendChild(picture)
+
         console.log(gridItem)
-        return gridItem;
+        return gridItem
     }
 
     const createMenu = () => {
         const grid = divFactory('grid-wrapper')
-        menuItems.forEach(item => {
-            grid.appendChild(_createMenuItemCard(item));
+        menuItems.forEach((item) => {
+            grid.appendChild(_createMenuItemCard(item))
         })
 
         console.log(grid)
-        return grid;
+        return grid
     }
 
-    return {createMenu}
-})();
-
+    return { createMenu }
+})()
 
 const createMenuPage = () => {
-    const parent = divFactory('image-text');
+    const parent = divFactory('image-text')
     //parent.appendChild(generateContactText())
     parent.appendChild(generateFooter())
 
     return parent
 }
-
-
 
 export { createMenuPage, Menu }
