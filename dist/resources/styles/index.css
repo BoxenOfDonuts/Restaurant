@@ -28,21 +28,6 @@ body {
     /* margin:0px 10px; */  
 }
 
-
-#a {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-        url('/dist/resources/images/hotchocolate-large.jpg');
-    background-position: center;
-    /* background-position: 50% 50%; */
-    /* background-size: contain ; */
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-color: #e7e7c6;
-    /* background-attachment: fixed; */
-    /* filter: blur(3px); */
-    /* margin:0px 10px; */
-}
-
 .canvas {
     display: flex;
     flex-direction: column;
