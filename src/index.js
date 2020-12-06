@@ -24,12 +24,12 @@ const updateActive = (e) => {
 
 function loadPage(e) {
     // should prob use id but...v
-    updateActive(e)
-
     const link = e.target.hash
     const active = document.querySelector('.active').hash
 
-    //if (link === active) {console.log('on the same page bro'); return};
+    if (link === active) {console.log('on the same page bro'); return};
+
+    updateActive(e)
 
     removeAllContent()
     switch (link) {
