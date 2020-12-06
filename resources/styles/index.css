@@ -185,6 +185,7 @@ ul.topnav li.left {
 .item-picture {
     width: 124px;
     height: 124px;
+    flex-shrink: 0;
 }
 
 .item-picture img {
@@ -197,4 +198,5 @@ ul.topnav li.left {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    padding-right: 2px;
 }
