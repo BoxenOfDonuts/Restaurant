@@ -5,7 +5,7 @@ const menuItem = (name, desc, pic, price) => {
     return { name, desc, pic, price }
 }
 
-const pictureUrl = '../dist/resources/images/mug-large.jpg'
+const pictureUrl = 'resources/images/mug-large.jpg'
 
 const Menu = (() => {
     let menuItems = []
