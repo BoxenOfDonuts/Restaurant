@@ -1,5 +1,5 @@
 const divFactory = (className) => {
-    let div = document.createElement('div')
+    const div = document.createElement('div')
     if (className) {
         div.classList.add(className)
     }
@@ -8,7 +8,7 @@ const divFactory = (className) => {
 }
 
 const createText = (content, type) => {
-    let text = document.createElement(type)
+    const text = document.createElement(type)
     text.innerText = content
 
     return text

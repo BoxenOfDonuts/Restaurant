@@ -13,8 +13,7 @@ const generateFooter = () => {
     const address = divFactory('address')
     const parent = divFactory('text-footer')
     const hours = divFactory('hours')
-    const addressText = '9944 Sherman Street\n\
-    Ridgewood, NY 11385'
+    const addressText = '9944 Sherman Street\nRidgewood, NY 11385'
 
     address.appendChild(createText('- Address -', 'h2'))
     address.appendChild(createText(addressText, 'p'))

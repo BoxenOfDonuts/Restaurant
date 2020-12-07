@@ -2,7 +2,7 @@ import { divFactory, createText } from './utils.js'
 import { generateFooter } from './footer'
 
 const logo = () => {
-    let logoDiv = divFactory('logo')
+    const logoDiv = divFactory('logo')
     logoDiv.innerHTML = '<i class="las la-mug-hot"></i>'
 
     return logoDiv
@@ -16,7 +16,7 @@ const generateHomepageText = () => {
         'p'
     )
     const lorem = createText(
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit,\
+        `Lorem ipsum dolor sit amet, consectetur adipiscing elit,\
     sed do eiusmod tempor incididunt ut labore et dolore \
     magna aliqua. Ut enim ad minim veniam, quis nostrud \
     exercitation ullamco laboris nisi ut aliquip ex ea \
@@ -24,7 +24,7 @@ const generateHomepageText = () => {
     reprehenderit in voluptate velit esse cillum dolore eu\
     fugiat nulla pariatur. Excepteur sint occaecat cupidatat\
     non proident, sunt in culpa qui officia deserunt mollit\
-    anim id est laborum.',
+    anim id est laborum.`,
         'p'
     )
 

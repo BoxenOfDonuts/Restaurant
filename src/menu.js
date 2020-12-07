@@ -1,14 +1,12 @@
 import { divFactory, createText } from './utils.js'
 import { generateFooter } from './footer'
 
-const menuItem = (name, desc, pic, price) => {
-    return { name, desc, pic, price }
-}
+const menuItem = (name, desc, pic, price) => ({ name, desc, pic, price })
 
 const pictureUrl = 'resources/images/mug-large.jpg'
 
 const Menu = (() => {
-    let menuItems = []
+    const menuItems = []
 
     // const printItems = () => {
     //     items().forEach((item) => console.log(item))
@@ -57,7 +55,7 @@ const Menu = (() => {
         const text = divFactory('item-info')
         const picture = divFactory('item-picture')
 
-        for (let key in item) {
+        for (const key in item) {
             let stuff = item[key]
             if (key === 'pic') {
                 const pic = document.createElement('img')
