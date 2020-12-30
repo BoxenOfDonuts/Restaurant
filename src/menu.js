@@ -1,9 +1,8 @@
 import { divFactory, createText } from './utils.js'
 import { generateFooter } from './footer'
+import pictureUrl from './resources/images/mug-large.jpg'
 
 const menuItem = (name, desc, pic, price) => ({ name, desc, pic, price })
-
-const pictureUrl = 'resources/images/mug-large.jpg'
 
 const Menu = (() => {
     const menuItems = []

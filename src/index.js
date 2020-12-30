@@ -2,6 +2,7 @@ import { createHomePage } from './homepage'
 import { createContactPage } from './contact'
 import { createAboutPage } from './about'
 import { Menu } from './menu'
+import './resources/styles/index.css'
 
 const links = document.querySelectorAll('.nav.topnav a')
 
